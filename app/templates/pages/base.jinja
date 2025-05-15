@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 
-<hmtl lang=""en">
+<html lang="en">
 
     <head>
         <meta charset="utf-8">
         <title>{% block title %}{% endblock %}</title>
 
-        <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.violet.min.css"
->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.violet.min.css">   
+        <link rel="stylesheet" href="/static/css/style.css">
     </head>
 
     <body>
         <header>
             <nav>
-            <ul>
-                 <li>Flask Demo</li>
+                <ul>
+                     <li>Flask Demo</li>
                 </ul>
 
                 <ul>
@@ -27,13 +25,15 @@
 
             </nav>
         </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
 
 
 
 
-
-        {% block content %}
-        {% endblock %}
+        
     </body>
 
 
